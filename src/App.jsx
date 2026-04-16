@@ -1,11 +1,17 @@
+import { lazy, Suspense } from 'react'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import Services from './components/Services'
-import Projects from './components/Projects'
-import Gallery from './components/Gallery'
 import Marquee from './components/Marquee'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+
+const Projects = lazy(() => import('./components/Projects'))
+const Gallery = lazy(() => import('./components/Gallery'))
+const Contact = lazy(() => import('./components/Contact'))
+const Footer = lazy(() => import('./components/Footer'))
+
+function SectionFallback() {
+  return <div className="min-h-[200px]" />
+}
 
 export default function App() {
   return (
@@ -15,12 +21,20 @@ export default function App() {
         <Hero />
         <Services />
         <Marquee />
-        <Projects />
-         <Marquee />
-        <Gallery />
-        <Contact />
+        <Suspense fallback={<SectionFallback />}>
+          <Projects />
+        </Suspense>
+        <Marquee />
+        <Suspense fallback={<SectionFallback />}>
+          <Gallery />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   )
 }

@@ -181,7 +181,7 @@ export default function Contact() {
                 <MapPin size={25} />
               </span>
               <a
-                href="https://maps.google.com/?q=31.451923,74.317131"
+                href="https://maps.app.goo.gl/Wa6FyEKaXDXFJT7G8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-white leading-relaxed group inline-flex flex-col"

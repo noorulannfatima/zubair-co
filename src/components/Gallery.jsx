@@ -4,18 +4,18 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { fadeUp, stagger, viewport, viewportTall } from './motion'
 
 const IMAGES = [
-  { thumb: '/gallary/construction3_thumb.jpg', src: '/gallary/construction3.jpg', alt: 'Construction 1', label: 'Construction site' },
-  { thumb: '/gallary/construction2_thumb.jpg', src: '/gallary/construction2.jpg', alt: 'Construction 2', label: 'Construction site' },
-  { thumb: '/gallary/construction1_thumb.jpg', src: '/gallary/construction1.jpg', alt: 'Construction 3', label: 'Construction site' },
-  { thumb: '/gallary/infrastructor1_thumb.jpg', src: '/gallary/infrastructor1.jpg', alt: 'Infrastructure 1', label: 'Construction site' },
-  { thumb: '/gallary/infrastructor2_thumb.jpg', src: '/gallary/infrastructor2.jpg', alt: 'Infrastructure 2', label: 'Construction site' },
-  { thumb: '/gallary/infrastructor3_thumb.jpg', src: '/gallary/infrastructor3.jpg', alt: 'Infrastructure 3', label: 'Construction site' },
-  { thumb: '/gallary/construction4_thumb.jpg', src: '/gallary/construction4.jpg', alt: 'Construction 1', label: 'Construction site' },
-  { thumb: '/gallary/construction5_thumb.jpg', src: '/gallary/construction5.jpg', alt: 'Construction 2', label: 'Construction site' },
-  { thumb: '/gallary/land_marking1_thumb.jpg', src: '/gallary/land_marking1.jpg', alt: 'Land Marking 1', label: 'Construction site' },
-  { thumb: '/gallary/land_marking2_thumb.jpg', src: '/gallary/land_marking2.jpg', alt: 'Land Marking 2', label: 'Construction site' },
-  { thumb: '/gallary/members_thumb.jpg', src: '/gallary/members.jpg', alt: 'Team Members', label: 'Our Team' },
-  { thumb: '/gallary/land_marking3_thumb.jpg', src: '/gallary/land_marking3.jpg', alt: 'Land Marking 3', label: 'Construction site' },
+  { thumb: '/gallary/construction3_thumb.jpg', src: '/gallary/construction3.jpg', alt: 'Residential building construction progress by Malik Zubair & Co. in Lahore', label: 'Construction' },
+  { thumb: '/gallary/construction2_thumb.jpg', src: '/gallary/construction2.jpg', alt: 'Structural framework and concrete work on a commercial project site', label: 'Construction' },
+  { thumb: '/gallary/construction1_thumb.jpg', src: '/gallary/construction1.jpg', alt: 'Foundation and groundwork for new residential development in DHA Lahore', label: 'Construction' },
+  { thumb: '/gallary/infrastructor1_thumb.jpg', src: '/gallary/infrastructor1.jpg', alt: 'Road infrastructure and civil engineering project in Punjab', label: 'Infrastructure' },
+  { thumb: '/gallary/infrastructor2_thumb.jpg', src: '/gallary/infrastructor2.jpg', alt: 'Utility infrastructure installation and site development work', label: 'Infrastructure' },
+  { thumb: '/gallary/infrastructor3_thumb.jpg', src: '/gallary/infrastructor3.jpg', alt: 'Large-scale infrastructure project with heavy machinery on site', label: 'Infrastructure' },
+  { thumb: '/gallary/construction4_thumb.jpg', src: '/gallary/construction4.jpg', alt: 'Multi-storey building under construction with scaffolding', label: 'Construction' },
+  { thumb: '/gallary/construction5_thumb.jpg', src: '/gallary/construction5.jpg', alt: 'Finishing phase of residential construction project', label: 'Construction' },
+  { thumb: '/gallary/land_marking1_thumb.jpg', src: '/gallary/land_marking1.jpg', alt: 'Land surveying and marking for new construction project', label: 'Land Marking' },
+  { thumb: '/gallary/land_marking2_thumb.jpg', src: '/gallary/land_marking2.jpg', alt: 'Site preparation and boundary marking for residential plot', label: 'Land Marking' },
+  { thumb: '/gallary/members_thumb.jpg', src: '/gallary/members.jpg', alt: 'Malik Zubair & Co. team members on project site', label: 'Our Team' },
+  { thumb: '/gallary/land_marking3_thumb.jpg', src: '/gallary/land_marking3.jpg', alt: 'Precision land demarcation with survey equipment', label: 'Land Marking' },
 ]
 
 export default function Gallery() {
@@ -23,13 +23,17 @@ export default function Gallery() {
 
   useEffect(() => {
     if (active === null) return
+    document.body.style.overflow = 'hidden'
     const onKey = (e) => {
       if (e.key === 'Escape') setActive(null)
       if (e.key === 'ArrowRight') setActive((i) => (i + 1) % IMAGES.length)
       if (e.key === 'ArrowLeft') setActive((i) => (i - 1 + IMAGES.length) % IMAGES.length)
     }
     window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', onKey)
+    }
   }, [active])
 
   return (

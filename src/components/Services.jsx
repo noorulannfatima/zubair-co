@@ -58,14 +58,16 @@ function BentoCard({ title, tag, desc, features, img, span }) {
       variants={fadeUp}
       className={`group relative overflow-hidden rounded-3xl border border-white/10 bg-carbon-2 p-8 md:p-10 flex flex-col justify-between transition-all duration-500 hover:border-orange-hi/50 ${span}`}
     >
-      <div
-        className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
-        style={{
-          backgroundImage: `linear-gradient(to top, rgba(11,11,12,0.95) 0%, rgba(11,11,12,0.75) 45%, rgba(11,11,12,0.45) 100%), url(${img})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
+      <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+        <img
+          src={img}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-carbon/95 via-carbon/75 to-carbon/45" />
+      </div>
 
       <div className="relative z-10 flex items-start justify-end">
         <span className="text-xs tracking-[0.3em] text-white/40">{tag}</span>
