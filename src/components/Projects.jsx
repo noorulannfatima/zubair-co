@@ -6,31 +6,31 @@ const PROJECTS = [
   {
     title: 'Modern Villa — DHA',
     category: 'Residential',
-    img: '/projects/home6.png',
+    img: '/projects/home6.jpg',
     span: 'md:col-span-4 md:row-span-2',
   },
   {
     title: 'Residence',
     category: 'Residential',
-    img: '/projects/home5.png',
+    img: '/projects/home5.jpg',
     span: 'md:col-span-2',
   },
   {
     title: '5 Marla House',
     category: 'Residential',
-    img: '/projects/home3.png',
+    img: '/projects/home3.jpg',
     span: 'md:col-span-2',
   },
   {
     title: 'Classical Estate',
     category: 'Luxury',
-    img: '/projects/home4.png',
+    img: '/projects/home4.jpg',
     span: 'md:col-span-3',
   },
   {
     title: 'Contemporary Home',
     category: 'Residential',
-    img: '/projects/home1.png',
+    img: '/projects/home1.jpg',
     span: 'md:col-span-3',
   },
 ]
@@ -47,6 +47,7 @@ function ProjectCard({ title, category, img, span }) {
         src={img}
         alt={title}
         loading="lazy"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/30 to-transparent" />

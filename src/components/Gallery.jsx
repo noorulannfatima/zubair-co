@@ -1,23 +1,21 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
-import { fadeUp, stagger, viewport } from './motion'
+import { fadeUp, stagger, viewport, viewportTall } from './motion'
 
 const IMAGES = [
-  { src: '/gallary/construction3.png', alt: 'Construction 1', label: 'Construction site' },
-  { src: '/gallary/construction2.png', alt: 'Construction 2', label: 'Construction site' },
-  { src: '/gallary/construction1.png', alt: 'Construction 3', label: 'Construction site' },
-  { src: '/gallary/infrastructor1.png', alt: 'Infrastructure 1', label: 'Construction site' },
-  { src: '/gallary/infrastructor2.png', alt: 'Infrastructure 2', label: 'Construction site' },
-  { src: '/gallary/infrastructor3.png', alt: 'Infrastructure 3', label: 'Construction site' },
-  { src: '/gallary/construction4.png', alt: 'Construction 1', label: 'Construction site' },
-  { src: '/gallary/construction5.png', alt: 'Construction 2', label: 'Construction site' },
-  { src: '/gallary/land_marking1.png', alt: 'Land Marking 1', label: 'Construction site' },
-  { src: '/gallary/land_marking2.png', alt: 'Land Marking 2', label: 'Construction site' },
-  { src: '/gallary/members.png', alt: 'Team Members', label: 'Our Team' },
-  { src: '/gallary/land_marking3.png', alt: 'Land Marking 3', label: 'Construction site' },
-  
-  
+  { thumb: '/gallary/construction3_thumb.jpg', src: '/gallary/construction3.jpg', alt: 'Construction 1', label: 'Construction site' },
+  { thumb: '/gallary/construction2_thumb.jpg', src: '/gallary/construction2.jpg', alt: 'Construction 2', label: 'Construction site' },
+  { thumb: '/gallary/construction1_thumb.jpg', src: '/gallary/construction1.jpg', alt: 'Construction 3', label: 'Construction site' },
+  { thumb: '/gallary/infrastructor1_thumb.jpg', src: '/gallary/infrastructor1.jpg', alt: 'Infrastructure 1', label: 'Construction site' },
+  { thumb: '/gallary/infrastructor2_thumb.jpg', src: '/gallary/infrastructor2.jpg', alt: 'Infrastructure 2', label: 'Construction site' },
+  { thumb: '/gallary/infrastructor3_thumb.jpg', src: '/gallary/infrastructor3.jpg', alt: 'Infrastructure 3', label: 'Construction site' },
+  { thumb: '/gallary/construction4_thumb.jpg', src: '/gallary/construction4.jpg', alt: 'Construction 1', label: 'Construction site' },
+  { thumb: '/gallary/construction5_thumb.jpg', src: '/gallary/construction5.jpg', alt: 'Construction 2', label: 'Construction site' },
+  { thumb: '/gallary/land_marking1_thumb.jpg', src: '/gallary/land_marking1.jpg', alt: 'Land Marking 1', label: 'Construction site' },
+  { thumb: '/gallary/land_marking2_thumb.jpg', src: '/gallary/land_marking2.jpg', alt: 'Land Marking 2', label: 'Construction site' },
+  { thumb: '/gallary/members_thumb.jpg', src: '/gallary/members.jpg', alt: 'Team Members', label: 'Our Team' },
+  { thumb: '/gallary/land_marking3_thumb.jpg', src: '/gallary/land_marking3.jpg', alt: 'Land Marking 3', label: 'Construction site' },
 ]
 
 export default function Gallery() {
@@ -73,7 +71,7 @@ export default function Gallery() {
           variants={stagger}
           initial="hidden"
           whileInView="show"
-          viewport={viewport}
+          viewport={viewportTall}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4 auto-rows-[1fr]"
         >
           {IMAGES.map((img, i) => (
@@ -84,9 +82,12 @@ export default function Gallery() {
               className="group relative block w-full aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-carbon hover:border-orange-hi/50 transition-colors"
             >
               <img
-                src={img.src}
+                src={img.thumb}
                 alt={img.alt}
                 loading="lazy"
+                decoding="async"
+                width={800}
+                height={600}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-carbon/85 via-carbon/10 to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />

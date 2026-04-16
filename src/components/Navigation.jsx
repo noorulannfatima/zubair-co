@@ -23,7 +23,7 @@ export default function Navigation() {
       <div className="mx-auto max-w-7xl px-4 sm:px-5 md:px-8 h-16 md:h-20 flex items-center justify-between gap-3 md:gap-6">
         <a href="#top" className="flex items-center gap-2 md:gap-3 text-black min-w-0 shrink">
           <img
-            src="/logo.png"
+            src="/logo_opt.jpg"
             alt="Malik Zubair & Co."
             className="h-8 md:h-10 w-auto block shrink-0"
           />

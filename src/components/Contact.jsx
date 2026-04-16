@@ -186,8 +186,8 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-white leading-relaxed group inline-flex flex-col"
               >
-                Office # 19, Block A, Old Officers Colony,<br />
-                Zarar Shaheed Road, Lahore Cantt.
+                588 Block 3 Sector A2 Ground Floor office # 3,<br />
+                Faizan Market Township Lahore.
                 <span className="mt-1 text-[12px] uppercase tracking-[0.2em] text-orange-hi/80 group-hover:text-orange-hi">
                   View on Google Maps →
                 </span>

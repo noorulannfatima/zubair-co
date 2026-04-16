@@ -61,8 +61,11 @@ export default function Hero() {
           >
             <div className="relative rounded-3xl overflow-hidden border border-white/10 aspect-[4/3] md:aspect-[4/5]">
               <img
-                src="/hero_image.jpg"
+                src="/hero_image_opt.jpg"
                 alt="Malik Zubair & Co. construction"
+                fetchpriority="high"
+                width={1600}
+                height={1067}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-carbon/60 via-transparent to-transparent" />
