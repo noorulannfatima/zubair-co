@@ -110,7 +110,7 @@ export default function Different() {
               Not just another
             </motion.span>
             <motion.span variants={fadeUp} className="block text-white/40">
-              construction firm.
+              building firm.
             </motion.span>
           </motion.h2>
 

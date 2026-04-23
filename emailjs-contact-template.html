@@ -1,0 +1,153 @@
+<!--
+  EmailJS — paste this into your template’s HTML content (Email Content → HTML).
+
+  Required template variables (match src/components/Contact.jsx):
+  {{name}}, {{from_name}}, {{from_email}}, {{reply_to}}, {{time}}, {{project_type}}, {{message}}, {{to_name}}
+
+  In EmailJS: set Reply To = {{reply_to}} or {{from_email}} in template settings if available.
+-->
+<div
+  style="
+    margin: 0;
+    padding: 24px 16px;
+    background-color: #0b0b0c;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+  "
+>
+  <table
+    role="presentation"
+    cellpadding="0"
+    cellspacing="0"
+    border="0"
+    width="100%"
+    style="max-width: 560px; margin: 0 auto"
+  >
+    <tr>
+      <td style="padding-bottom: 20px">
+        <div
+          style="
+            font-size: 11px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #ff8c00;
+            margin-bottom: 8px;
+          "
+        >
+          Malik Zubair &amp; Co.
+        </div>
+        <div
+          style="
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            line-height: 1.2;
+          "
+        >
+          New website inquiry
+        </div>
+        <div style="margin-top: 12px; height: 3px; width: 48px; background-color: #ff8c00; border-radius: 2px"></div>
+      </td>
+    </tr>
+    <tr>
+      <td
+        style="
+          background-color: #141416;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 16px;
+          padding: 24px;
+        "
+      >
+        <div style="font-size: 13px; color: rgba(255, 255, 255, 0.65); margin-bottom: 20px">
+          A message by <strong style="color: #ffffff">{{name}}</strong> has been received. Kindly respond at your earliest convenience.
+        </div>
+
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr>
+            <td style="width: 56px; vertical-align: top; padding-right: 16px">
+              <div
+                style="
+                  width: 48px;
+                  height: 48px;
+                  border-radius: 12px;
+                  background: linear-gradient(145deg, #ff8c00 0%, #ff6a00 100%);
+                  color: #0b0b0c;
+                  font-size: 18px;
+                  font-weight: 800;
+                  text-align: center;
+                  line-height: 48px;
+                "
+                role="img"
+                aria-label="Contact"
+              >
+                MZ
+              </div>
+            </td>
+            <td style="vertical-align: top">
+              <div style="color: #ffffff; font-size: 17px; font-weight: 700; margin-bottom: 4px">
+                {{from_name}}
+              </div>
+              <div style="margin-bottom: 14px">
+                <a
+                  href="mailto:{{from_email}}"
+                  style="color: #ff8c00; text-decoration: none; font-size: 14px"
+                  >{{from_email}}</a
+                >
+              </div>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 16px">
+                <tr>
+                  <td style="padding: 6px 12px; background-color: rgba(255, 140, 0, 0.15); border-radius: 999px">
+                    <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #ff8c00"
+                      >{{project_type}}</span
+                    >
+                  </td>
+                </tr>
+              </table>
+              <div style="font-size: 12px; color: rgba(255, 255, 255, 0.4); margin-bottom: 16px">{{time}}</div>
+
+              <div
+                style="
+                  margin-top: 4px;
+                  padding-top: 16px;
+                  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+                "
+              >
+                <div
+                  style="
+                    font-size: 11px;
+                    letter-spacing: 0.18em;
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, 0.45);
+                    margin-bottom: 8px;
+                  "
+                >
+                  Message
+                </div>
+                <div
+                  style="
+                    font-size: 15px;
+                    color: rgba(255, 255, 255, 0.9);
+                    white-space: pre-wrap;
+                    word-break: break-word;
+                  "
+                >
+                  {{message}}
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding-top: 20px; text-align: center">
+        <div style="font-size: 11px; color: rgba(255, 255, 255, 0.35)">
+          Sent via malikzubairco.com contact form · {{to_name}}
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

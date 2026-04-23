@@ -11,7 +11,7 @@ export default function Footer() {
           <span className="font-display font-bold text-sm leading-tight">
             MALIK ZUBAIR <span className="text-orange-hi">&</span> CO.
             <span className="block text-[9px] tracking-[0.18em] font-normal text-white/50">
-              CONSTRUCTION & INFRASTRUCTURE
+              BUILDING & INFRASTRUCTURE
             </span>
           </span>
         </a>

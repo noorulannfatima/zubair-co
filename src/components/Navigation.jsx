@@ -30,7 +30,7 @@ export default function Navigation() {
           <span className="font-display font-bold tracking-tight leading-tight whitespace-nowrap text-[11px] sm:text-xs md:text-sm lg:text-base">
             MALIK ZUBAIR <span className="text-orange-hi">&</span> CO.
             <span className="hidden sm:block text-[8px] md:text-[10px] tracking-[0.18em] font-normal text-black/55">
-              CONSTRUCTION & INFRASTRUCTURE
+              BUILDING & INFRASTRUCTURE
             </span>
           </span>
         </a>

@@ -35,7 +35,7 @@ export default function Hero() {
               variants={fadeUp}
               className="mt-8 max-w-xl text-base md:text-lg text-white/70 leading-relaxed"
             >
-              Malik Zubair & Co. delivers construction and infrastructure projects
+              Malik Zubair & Co. delivers building and infrastructure projects
               across Pakistan — fusing industrial strength with architectural
               precision. We don't just build structures, we shape skylines.
             </motion.p>
@@ -62,7 +62,7 @@ export default function Hero() {
             <div className="relative rounded-3xl overflow-hidden border border-white/10 aspect-[4/3] md:aspect-[4/5]">
               <img
                 src="/hero_image_opt.jpg"
-                alt="Malik Zubair & Co. construction"
+                alt="Malik Zubair & Co. building"
                 fetchpriority="high"
                 width={1600}
                 height={1067}
