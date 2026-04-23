@@ -171,10 +171,9 @@ export default function Contact() {
               <span className="grid place-items-center w-10 h-10 rounded-full border border-white/15 text-orange-hi shrink-0">
                 <Phone size={16} />
               </span>
-              <div className="text-white/80">
-                <a href="tel:+923004337330" className="hover:text-white block">+92 300 4337330</a>
-                <a href="tel:+923219451437" className="hover:text-white block">+92 321 9451437</a>
-              </div>
+              <a href="tel:+924235228676" className="text-white/80 hover:text-white">
+                042 35228676
+              </a>
             </li>
             <li className="flex items-start gap-4">
               <span className="grid place-items-center w-10 h-10 rounded-full border border-white/15 text-orange-hi shrink-0">
@@ -186,8 +185,8 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-white leading-relaxed group inline-flex flex-col"
               >
-                588 Block 3 Sector A2 Ground Floor office # 3,<br />
-                Faizan Market Township Lahore.
+                Office #3, Ground floor, 588 Faizan Market,<br />
+                Block 3, Sector A2, Township, Lahore.
                 <span className="mt-1 text-[12px] uppercase tracking-[0.2em] text-orange-hi/80 group-hover:text-orange-hi">
                   View on Google Maps →
                 </span>
