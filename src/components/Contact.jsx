@@ -6,9 +6,9 @@ import { fadeUp, stagger, viewport } from './motion'
 
 const PROJECT_TYPES = ['Residential', 'Commercial', 'Industrial', 'Other']
 
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID?.trim()
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID?.trim()
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY?.trim()
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -61,22 +61,22 @@ export default function Contact() {
         dateStyle: 'medium',
         timeStyle: 'short',
       })
-      const composedMessage =
-        `Project Type: ${form.type}\n` +
-        `Email: ${form.email}\n\n` +
-        form.message
+      // Keys must match EmailJS template placeholders exactly (case-sensitive).
+      // Subject often uses {{title}}; body may use {{PROJECT_TYPE}} vs {{project_type}} depending on template.
+      const title = `${form.type} inquiry`
 
       await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
         {
+          title,
           name: form.name,
           from_name: form.name,
           from_email: form.email,
-          reply_to: form.email,
           time,
+          PROJECT_TYPE: form.type,
           project_type: form.type,
-          message: composedMessage,
+          message: form.message,
           to_name: 'Malik Zubair & Co.',
         },
         { publicKey: PUBLIC_KEY }
@@ -84,7 +84,14 @@ export default function Contact() {
       setStatus('success')
       setToast({ type: 'success', text: 'Message sent — we\u2019ll be in touch shortly.' })
     } catch (err) {
-      console.error('EmailJS send failed:', err)
+      const status = err?.status
+      const text = err?.text ?? err?.message
+      console.error('EmailJS send failed:', {
+        status,
+        text,
+        serviceIdPrefix: SERVICE_ID?.slice(0, 8),
+        templateIdPrefix: TEMPLATE_ID?.slice(0, 8),
+      })
       setStatus('error')
       setToast({ type: 'error', text: 'Could not send right now. Please try again or email us directly.' })
     }
