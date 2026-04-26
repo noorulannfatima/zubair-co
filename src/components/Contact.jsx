@@ -296,7 +296,7 @@ export default function Contact() {
                     {status === 'sending' ? (
                       <>
                         <Loader2 size={16} className="animate-spin" />
-                        Sending...
+                        Sending your email…
                       </>
                     ) : (
                       <>
