@@ -5,7 +5,7 @@ import { fadeUp, stagger } from './motion'
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-carbon via-carbon to-carbon" />
         <div className="absolute inset-0 bg-grid opacity-40" />
       </div>
@@ -68,7 +68,7 @@ export default function Hero() {
                 height={1067}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-carbon/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-carbon/60 via-transparent to-transparent pointer-events-none" />
             </div>
           </motion.div>
         </div>
