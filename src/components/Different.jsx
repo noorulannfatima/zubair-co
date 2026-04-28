@@ -110,7 +110,7 @@ export default function Different() {
               Not just another
             </motion.span>
             <motion.span variants={fadeUp} className="block text-white/40">
-              building firm.
+              construction company.
             </motion.span>
           </motion.h2>
 
@@ -118,8 +118,10 @@ export default function Different() {
             variants={fadeUp}
             className="mt-6 max-w-2xl text-white/60"
           >
-            Six principles we refuse to compromise on — the reason our clients
-            come back, and their architects recommend us.
+            From residential house construction to commercial and industrial
+            construction, we deliver reliable results in Lahore and across
+            Pakistan — built with disciplined project management, quality
+            workmanship, and transparent communication.
           </motion.p>
         </motion.div>
 

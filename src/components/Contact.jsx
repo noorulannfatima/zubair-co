@@ -200,6 +200,26 @@ export default function Contact() {
               </a>
             </li>
           </motion.ul>
+
+          <motion.div
+            variants={fadeUp}
+            className="mt-10 overflow-hidden rounded-3xl border border-white/10 bg-carbon"
+          >
+            <div className="px-5 py-4 border-b border-white/10">
+              <div className="text-[11px] uppercase tracking-[0.25em] text-white/55">
+                — Our location on Google Maps
+              </div>
+            </div>
+            <div className="relative aspect-[16/10]">
+              <iframe
+                title="Malik Zubair & Co. — Google Map"
+                src="https://www.google.com/maps?output=embed&q=Office%20%233%2C%20Ground%20floor%2C%20588%20Faizan%20Market%2C%20Block%203%2C%20Sector%20A2%2C%20Township%2C%20Lahore%2C%20Pakistan"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+          </motion.div>
         </motion.div>
 
         <motion.div
