@@ -16,12 +16,12 @@ const IMAGES = [
   { thumb: '/gallary/land_marking2_thumb.jpg', src: '/gallary/land_marking2.jpg', alt: 'Site preparation and boundary marking for residential plot', label: 'Land Marking' },
   { thumb: '/gallary/members_thumb.jpg', src: '/gallary/members.jpg', alt: 'Malik Zubair & Co. team members on project site', label: 'Our Team' },
   { thumb: '/gallary/land_marking3_thumb.jpg', src: '/gallary/land_marking3.jpg', alt: 'Precision land demarcation with survey equipment', label: 'Land Marking' },
-  { thumb: '/gallary/office0_thumb.jpg', src: '/gallary/office0.jpg', alt: 'Malik Zubair & Co. modern head office interior in Lahore', label: 'Head Office' },
-  { thumb: '/gallary/office1_thumb.jpg', src: '/gallary/office1.jpg', alt: 'Executive conference room at Malik Zubair & Co. headquarters', label: 'Head Office' },
-  { thumb: '/gallary/office2_thumb.jpg', src: '/gallary/office2.jpg', alt: 'Professional work environment and workstation area at Malik Zubair & Co.', label: 'Head Office' },
-  { thumb: '/gallary/office3_thumb.jpg', src: '/gallary/office3.jpg', alt: 'Main lobby and reception area at Malik Zubair & Co. office', label: 'Head Office' },
-  { thumb: '/gallary/office4_thumb.jpg', src: '/gallary/office4.jpg', alt: 'Discussion room and meeting space for client consultations', label: 'Head Office' },
-  { thumb: '/gallary/office5_thumb.jpg', src: '/gallary/office5.jpg', alt: 'Exterior view of Malik Zubair & Co. office building', label: 'Head Office' },
+  { thumb: '/gallary/office0_thumb.jpg', src: '/gallary/office0.jpg', alt: 'Malik Zubair & Co. modern side office interior in Lahore', label: 'Office' },
+  { thumb: '/gallary/office1_thumb.jpg', src: '/gallary/office1.jpg', alt: 'Executive conference room at Malik Zubair & Co. office', label: 'Office' },
+  { thumb: '/gallary/office2_thumb.jpg', src: '/gallary/office2.jpg', alt: 'Professional work environment and workstation area at Malik Zubair & Co.', label: 'Office' },
+  { thumb: '/gallary/office3_thumb.jpg', src: '/gallary/office3.jpg', alt: 'Main lobby and reception area at Malik Zubair & Co. office', label: 'Office' },
+  { thumb: '/gallary/office4_thumb.jpg', src: '/gallary/office4.jpg', alt: 'Discussion room and meeting space for client consultations', label: 'Office' },
+  { thumb: '/gallary/office5_thumb.jpg', src: '/gallary/office5.jpg', alt: 'Exterior view of Malik Zubair & Co. office building', label: 'Office' },
 ]
 
 export default function Gallery() {
