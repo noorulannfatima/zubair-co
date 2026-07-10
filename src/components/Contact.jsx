@@ -78,6 +78,7 @@ export default function Contact() {
           project_type: form.type,
           message: form.message,
           to_name: 'Malik Zubair & Co.',
+          to_email: 'info@malikzubairandco.org',
         },
         { publicKey: PUBLIC_KEY }
       )
@@ -170,8 +171,8 @@ export default function Contact() {
               <span className="grid place-items-center w-10 h-10 rounded-full border border-white/15 text-orange-hi shrink-0">
                 <Mail size={16} />
               </span>
-              <a href="mailto:malikzubairandco588@gmail.com" className="text-white/80 hover:text-white break-all">
-                malikzubairandco588@gmail.com
+              <a href="mailto:info@malikzubairandco.org" className="text-white/80 hover:text-white break-all">
+                info@malikzubairandco.org
               </a>
             </li>
             <li className="flex items-center gap-4">
